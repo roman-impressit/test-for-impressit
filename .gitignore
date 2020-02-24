@@ -1,0 +1,13 @@
+node_modules
+.DS_Store
+.idea
+.idea/.gitignore
+.idea/books-service.iml
+.idea/codeStyles/
+.idea/dbnavigator.xml
+.idea/jsLibraryMappings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/sonarlint/
+.serverless/
+package-lock.json

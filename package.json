@@ -1,0 +1,22 @@
+{
+  "name": "books-service",
+  "version": "1.0.0",
+  "description": "Test task for Impressit",
+  "main": "src/index.js",
+  "scripts": {
+    "deploy:all": "sls deploy",
+    "deploy:func": "sls deploy -f BookLibrary"
+  },
+  "dependencies": {
+    "serverless": "1.64.0",
+    "uuid": "3.4.0",
+    "aws-sdk": "2.624.0"
+  },
+  "keywords": [
+    "lambda",
+    "aws",
+    "api-gateway"
+  ],
+  "author": "Roman Fedyshyn",
+  "license": "MIT"
+}

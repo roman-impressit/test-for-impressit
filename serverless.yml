@@ -1,0 +1,49 @@
+service: BooksService
+
+frameworkVersion: ">=1.13.0 <2.0.0"
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  cfLogs: true
+  environment:
+    region: ${file(./const.json):AWS.REGION}
+  region: ${file(./const.json):AWS.REGION}
+  versionFunctions: false
+
+package:
+  individually: true
+  excludeDevDependencies: false
+  include:
+    - src/**
+    - ./node_modules
+    - const.json
+
+functions:
+  BookLibrary:
+    handler: src/index.handler
+    timeout: 30
+    memorySize: 256
+    cfLogs: true
+    include: ./index.js
+    events:
+      - http:
+          method: GET
+          path: /books
+          cors: false
+          integration: lambda
+      - http:
+          method: GET
+          path: /book/{bookUUID}
+          cors: false
+          integration: lambda
+      - http:
+          method: POST
+          path: /book/{bookUUID}/{operationType}
+          cors: false
+          integration: lambda
+      - http:
+          method: POST
+          path: /book/add
+          cors: false
+          integration: lambda

@@ -1,0 +1,9 @@
+{
+  "DB": {
+    "ENDPOINT": "https://dynamodb.us-west-2.amazonaws.com",
+    "TABLE_NAME": "BooksLibrary"
+  },
+  "AWS": {
+    "REGION": "us-west-2"
+  }
+}
