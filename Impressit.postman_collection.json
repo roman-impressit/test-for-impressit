@@ -1,176 +1,176 @@
 {
-    "info": {
-        "_postman_id": "e001d236-e1c0-4b1b-a41a-668c96141fb5",
-        "name": "Impressit",
-        "description": "Small collection for testing simple serverless app which give posibillity to manage book library.",
-        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-    },
-    "item": [
-        {
-            "name": "Get all books",
-            "request": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                    "raw": "{{baseAPI}}/books",
-                    "host": [
-                        "{{baseAPI}}"
-                    ],
-                    "path": [
-                        "books"
-                    ]
-                }
-            },
-            "response": []
-        },
-        {
-            "name": "Get book details",
-            "request": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                    "raw": "{{baseAPI}}/book/{{bookUUID}}",
-                    "host": [
-                        "{{baseAPI}}"
-                    ],
-                    "path": [
-                        "book",
-                        "{{bookUUID}}"
-                    ]
-                }
-            },
-            "response": []
-        },
-        {
-            "name": "Delete book from library",
-            "request": {
-                "method": "POST",
-                "header": [],
-                "url": {
-                    "raw": "{{baseAPI}}/book/{{bookUUID}}/delete",
-                    "host": [
-                        "{{baseAPI}}"
-                    ],
-                    "path": [
-                        "book",
-                        "{{bookUUID}}",
-                        "delete"
-                    ]
-                }
-            },
-            "response": []
-        },
-        {
-            "name": "Add a book to the library",
-            "request": {
-                "method": "POST",
-                "header": [
-                    {
-                        "key": "Content-Type",
-                        "name": "Content-Type",
-                        "value": "application/json",
-                        "type": "text"
-                    }
-                ],
-                "body": {
-                    "mode": "raw",
-                    "raw": "{{baseBook}}",
-                    "options": {
-                        "raw": {
-                            "language": "json"
-                        }
-                    }
-                },
-                "url": {
-                    "raw": "{{baseAPI}}/book/add",
-                    "host": [
-                        "{{baseAPI}}"
-                    ],
-                    "path": [
-                        "book",
-                        "add"
-                    ]
-                }
-            },
-            "response": []
-        },
-        {
-            "name": "Update book details",
-            "request": {
-                "method": "POST",
-                "header": [
-                    {
-                        "key": "Content-Type",
-                        "name": "Content-Type",
-                        "value": "application/json",
-                        "type": "text"
-                    }
-                ],
-                "body": {
-                    "mode": "raw",
-                    "raw": "{\n\t\"title\": \"Some\"\n}",
-                    "options": {
-                        "raw": {
-                            "language": "json"
-                        }
-                    }
-                },
-                "url": {
-                    "raw": "{{baseAPI}}/book/{{bookUUID}}/update",
-                    "host": [
-                        "{{baseAPI}}"
-                    ],
-                    "path": [
-                        "book",
-                        "{{bookUUID}}",
-                        "update"
-                    ]
-                }
-            },
-            "response": []
-        }
-    ],
-    "event": [
-        {
-            "listen": "prerequest",
-            "script": {
-                "id": "ccca4abf-b19f-4cc0-bcf7-cc6c20570591",
-                "type": "text/javascript",
-                "exec": [
-                    ""
-                ]
-            }
-        },
-        {
-            "listen": "test",
-            "script": {
-                "id": "c29d4a63-a38a-4dcc-b0d8-f981932108e9",
-                "type": "text/javascript",
-                "exec": [
-                    ""
-                ]
-            }
-        }
-    ],
-    "variable": [
-        {
-            "id": "4043b023-3dec-4bd8-b1ea-66c8025ad8ac",
-            "key": "baseAPI",
-            "value": "https://6kr11im5dl.execute-api.us-west-2.amazonaws.com/dev",
-            "type": "string"
-        },
-        {
-            "id": "0e32b1db-674d-4053-b154-0ff9202ca5ae",
-            "key": "baseBook",
-            "value": "{\n  \"title\": \"Scrum\",\n  \"authorName\": \"Jeff Sutherland\",\n  \"releaseDate\": \"01/01/2016\"\n}",
-            "type": "string"
-        },
-        {
-            "id": "4d4a9f12-5ebb-47c8-b7d2-fad08bdce44d",
-            "key": "bookUUID",
-            "value": "5562b2c0-569c-11ea-95ac-c16d202e4445",
-            "type": "string"
-        }
-    ],
-    "protocolProfileBehavior": {}
+	"info": {
+		"_postman_id": "e001d236-e1c0-4b1b-a41a-668c96141fb5",
+		"name": "Impressit",
+		"description": "Small collection for testing simple serverless app which give posibillity to manage book library.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseAPI}}/books",
+					"host": [
+						"{{baseAPI}}"
+					],
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get book details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseAPI}}/book/{{bookUUID}}",
+					"host": [
+						"{{baseAPI}}"
+					],
+					"path": [
+						"book",
+						"{{bookUUID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete book from library",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseAPI}}/book/{{bookUUID}}/delete",
+					"host": [
+						"{{baseAPI}}"
+					],
+					"path": [
+						"book",
+						"{{bookUUID}}",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a book to the library",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{{baseBook}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseAPI}}/book/add",
+					"host": [
+						"{{baseAPI}}"
+					],
+					"path": [
+						"book",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update book details",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Some new title\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseAPI}}/book/{{bookUUID}}/update",
+					"host": [
+						"{{baseAPI}}"
+					],
+					"path": [
+						"book",
+						"{{bookUUID}}",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "ccca4abf-b19f-4cc0-bcf7-cc6c20570591",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "c29d4a63-a38a-4dcc-b0d8-f981932108e9",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "45cd773e-2009-4b71-bc4c-02f2eb3414d5",
+			"key": "baseAPI",
+			"value": "https://xfkzfzml5h.execute-api.us-west-2.amazonaws.com/dev",
+			"type": "string"
+		},
+		{
+			"id": "87288572-cd2b-4e50-bd37-5f9b613de411",
+			"key": "baseBook",
+			"value": "{\n  \"title\": \"Scrum\",\n  \"authorName\": \"Jeff Sutherland\",\n  \"releaseDate\": \"01/01/2016\"\n}",
+			"type": "string"
+		},
+		{
+			"id": "e13576cc-5a07-4bcd-af56-8b415a955845",
+			"key": "bookUUID",
+			"value": "11068780-56a3-11ea-bd00-2556394e3f2c",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
 }
